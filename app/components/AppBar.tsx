@@ -31,6 +31,12 @@ export default function AppBar() {
             >
               Blog
             </Link>
+            <Link
+              href="/tutorials"
+              className="text-gray-700 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white transition-colors"
+            >
+              Tutorials
+            </Link>
           </div>
         </div>
       </div>

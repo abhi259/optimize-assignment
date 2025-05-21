@@ -36,8 +36,10 @@ Please submit a GitHub repo or ZIP file with:
 
 ---
 
-
 ## Changes Made
+
+### App Bar
+- Added Tutorial link in the Navbar
 
 ### Landing Page
 - Fixed video filename in `Hero` component

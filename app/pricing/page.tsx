@@ -11,11 +11,11 @@ export default function Pricing() {
           Choose the plan that's right for you
         </p>
 
-        <div className="flex overflow-hidden gap-8 max-w-5xl mx-auto">
+        <div className="flex overflow-auto gap-8 max-w-5xl mx-auto">
           {plans.map((plan) => (
             <div
               className="min-w-[250px] bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 flex flex-col"
-              key={"key"}
+              key={plan.name}
             >
               <h2 className="text-2xl font-bold mb-4">{plan.name}</h2>
               <div className="mb-6">
@@ -59,9 +59,9 @@ export default function Pricing() {
         <div className="mt-12 text-center">
           <p className="text-gray-600 dark:text-gray-300">
             Need a custom plan?{" "}
-            <a href="/contact" className="text-purple-600 hover:underline">
+            <Link href="/contact" className="text-purple-600 hover:underline">
               Contact us
-            </a>
+            </Link>
           </p>
         </div>
       </div>

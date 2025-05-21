@@ -35,3 +35,48 @@ Please submit a GitHub repo or ZIP file with:
 4. **Reference**: Documentation URL (optional)
 
 ---
+
+
+## Changes Made
+
+### Landing Page
+- Fixed video filename in `Hero` component
+- Enhanced link performance with prefetch in hero component
+- Optimized image loading:
+  - Replaced `<img>` with Next.js `<Image/>` component in Gallery section
+  - Implemented placeholder blur for better loading experience
+- Moved features data from `app/pages` directly into Features component for better organization
+
+### Gallery Page
+- Improved image optimization:
+  - Replaced `<img>` with `<Image/>` component
+  - Added proper alt text for accessibility
+  - Set priority loading for first 6 images
+
+### Demo Page
+- Enhanced image and link performance:
+  - Replaced `<img>` with `<Image/>` for generated images
+  - Upgraded `<a>` tags to Next.js `<Link>` for prefetching
+- Fixed layout shift by adding min-height to textarea
+- Optimized PromptInput component:
+  - Removed unnecessary state management (useState, useEffect, useCallback)
+  - Eliminated redundant isMountedState
+  - Reduced memory usage and prevented unnecessary rerenders
+
+### Blog Page
+- Improved image handling:
+  - Replaced `<img>` with `<Image/>` component
+  - Updated local image imports to support blur placeholder
+- Implemented generateStaticParams for blog routes:
+  - Enables static generation during build
+  - Improves performance with pre-rendered pages
+- Fixed NewsLetter component text color to black
+
+### Pricing Page
+- Fixed React key prop in mapped components
+- Improved card container scrolling:
+  - Changed overflow-hidden to overflow-auto
+- Enhanced navigation performance:
+  - Replaced anchor tags with Next.js Link components
+  - Enabled prefetching
+  - Prevented full page reloads

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import PromptInput from "../components/PromptInput";
 import GeneratedImage from "../components/GeneratedImage";
+import image11 from "../images/11.png";
+import Link from "next/link";
 
 export default function Demo() {
   const [prompt, setPrompt] = useState("");
@@ -13,10 +15,15 @@ export default function Demo() {
     if (!prompt) return;
 
     setIsGenerating(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setGeneratedImage("/11.png");
-    setIsGenerating(false);
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setGeneratedImage(image11.src);
+    } catch (error) {
+      console.error("Failed to generate image:", error);
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   return (
@@ -26,7 +33,7 @@ export default function Demo() {
           Try MagicMoments
         </h1>
 
-        <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+        <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 min-h-[322px]">
           <PromptInput
             prompt={prompt}
             setPrompt={setPrompt}
@@ -40,9 +47,13 @@ export default function Demo() {
         <div className="mt-12 text-center">
           <p className="text-gray-600 dark:text-gray-300">
             Want to create more? Check out our{" "}
-            <a href="/pricing" className="text-purple-600 hover:underline">
+            <Link
+              href="/pricing"
+              prefetch={true}
+              className="text-purple-600 hover:underline"
+            >
               pricing plans
-            </a>
+            </Link>
           </p>
         </div>
       </div>

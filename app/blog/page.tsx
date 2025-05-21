@@ -1,5 +1,11 @@
 import BlogPostCard from "../components/BlogPostCard";
 import Newsletter from "../components/Newsletter";
+import blog1 from "../images/1.png";
+import blog2 from "../images/2.png";
+import blog3 from "../images/3.png";
+import blog4 from "../images/4.png";
+import blog5 from "../images/5.png";
+import blog6 from "../images/6.png";
 
 export default function Blog() {
   return (
@@ -22,14 +28,14 @@ export default function Blog() {
   );
 }
 
-const blogPosts = [
+export const blogPosts = [
   {
     title: "The Future of AI Art Generation",
     excerpt:
       "Exploring the latest advancements in AI art generation and what they mean for creatives",
     date: "March 15, 2024",
     readTime: 5,
-    image: "/1.png",
+    image: blog1,
     link: "/blog/future-ai-art",
   },
   {
@@ -38,7 +44,7 @@ const blogPosts = [
       "Learn how to write more effective prompts to get the best results from AI art generators",
     date: "March 12, 2024",
     readTime: 8,
-    image: "/2.png",
+    image: blog2,
     link: "/blog/ai-art-prompts",
   },
   {
@@ -47,7 +53,7 @@ const blogPosts = [
       "How businesses are leveraging AI-generated art in their marketing and branding",
     date: "March 10, 2024",
     readTime: 6,
-    image: "/3.png",
+    image: blog3,
     link: "/blog/commercial-ai-art",
   },
   {
@@ -56,7 +62,7 @@ const blogPosts = [
       "Understanding the ethical considerations and best practices in AI art creation",
     date: "March 8, 2024",
     readTime: 7,
-    image: "/4.png",
+    image: blog4,
     link: "/blog/ethics-ai-art",
   },
   {
@@ -65,7 +71,7 @@ const blogPosts = [
       "A deep dive into creating and fine-tuning custom art styles with AI",
     date: "March 5, 2024",
     readTime: 9,
-    image: "/5.png",
+    image: blog5,
     link: "/blog/custom-ai-styles",
   },
   {
@@ -74,7 +80,7 @@ const blogPosts = [
       "How to create engaging AI-generated content for your social media presence",
     date: "March 3, 2024",
     readTime: 6,
-    image: "/6.png",
+    image: blog6,
     link: "/blog/ai-art-social-media",
   },
 ];

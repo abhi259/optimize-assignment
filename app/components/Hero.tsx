@@ -11,7 +11,7 @@ export default function Hero() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="/2.mp4" type="video/mp4" />
+        <source src="hero-video.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}
@@ -29,12 +29,14 @@ export default function Hero() {
           <Link
             href="/demo"
             className="px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
+            prefetch={true}
           >
             Try Demo
           </Link>
           <Link
             href="/pricing"
             className="px-8 py-3 border border-white text-white rounded-full hover:bg-white/10 transition-colors"
+            prefetch={true}
           >
             View Pricing
           </Link>

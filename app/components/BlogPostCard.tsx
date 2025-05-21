@@ -1,11 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface BlogPost {
   title: string;
   excerpt: string;
   date: string;
   readTime: number;
-  image: string;
+  image: string | StaticImageData;
   link: string;
 }
 
@@ -17,7 +19,14 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
   return (
     <article className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
       <div className="relative h-48">
-        <img src={post.image} className="object-cover" />
+        <Image
+          src={post.image}
+          alt={post.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          placeholder="blur"
+        />
       </div>
       <div className="p-6">
         <div className="flex items-center mb-4">
